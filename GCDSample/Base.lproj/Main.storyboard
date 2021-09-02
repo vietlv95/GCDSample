@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c0O-mJ-FWb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GCDSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehd-4v-a2n">
+                                <rect key="frame" x="334" y="88" width="80" height="40"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Cyd-SW-sRZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="tJG-5y-hZh"/>
+                                </constraints>
+                                <state key="normal" title="Photos"/>
+                                <connections>
+                                    <action selector="photoButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mwf-db-W6f"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-7D-vfa">
+                                <rect key="frame" x="0.0" y="228" width="414" height="634"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SYM-NU-nh7">
+                                <rect key="frame" x="0.0" y="172" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-Oi-tNi">
+                                <rect key="frame" x="24" y="98" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pickPhoto"/>
+                                <connections>
+                                    <action selector="pickPhototoButtonDIdTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Fp-Ct-OcO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N29-KI-jMB">
+                                <rect key="frame" x="152" y="98" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pickDate"/>
+                                <connections>
+                                    <action selector="pickDateButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFj-n0-V92"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eDr-7D-vfa" secondAttribute="bottom" id="1jx-k1-ZLl"/>
+                            <constraint firstItem="Ehd-4v-a2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6nU-yt-8Rl"/>
+                            <constraint firstItem="eDr-7D-vfa" firstAttribute="top" secondItem="SYM-NU-nh7" secondAttribute="bottom" constant="5" id="FCs-0H-xZP"/>
+                            <constraint firstItem="eDr-7D-vfa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GKA-Fa-qCg"/>
+                            <constraint firstItem="eDr-7D-vfa" firstAttribute="top" secondItem="Ehd-4v-a2n" secondAttribute="bottom" constant="100" id="GbN-1X-jtQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehd-4v-a2n" secondAttribute="trailing" id="b1M-A4-aEQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SYM-NU-nh7" secondAttribute="trailing" id="b7F-08-h9H"/>
+                            <constraint firstItem="eDr-7D-vfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cG6-y7-po3"/>
+                            <constraint firstItem="SYM-NU-nh7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iM8-EC-v9S"/>
+                            <constraint firstItem="eDr-7D-vfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jDt-09-2Tv"/>
+                            <constraint firstItem="eDr-7D-vfa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kQF-d6-twF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eDr-7D-vfa" secondAttribute="trailing" id="vag-IX-qad"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LLO-9x-hLq"/>
+                    <connections>
+                        <outlet property="searchBar" destination="SYM-NU-nh7" id="nR3-X0-EdD"/>
+                        <outlet property="tableView" destination="eDr-7D-vfa" id="bCO-SQ-VDG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="38.839285714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r99-BV-iuD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c0O-mJ-FWb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GKW-KI-PeP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5BP-1J-6pZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beH-dh-VYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="38.839285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
